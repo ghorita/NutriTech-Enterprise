@@ -1,0 +1,17 @@
+﻿@model CalculadoraIMC
+
+<form asp-controller="IMCCalculadora" asp-action="CalcularIMC" method="post">
+    <label for="Peso">Peso (kg): </label>
+    <input asp-for="Peso" />
+    <span asp-validation-for="Peso"></span>
+
+    <br />
+
+    <label for="Altura">Altura (m): </label>
+    <input asp-for="Altura" />
+    <span asp-validation-for="Altura"></span>
+
+    <br />
+
+    <input type="submit" value="Calcular" />
+</form>

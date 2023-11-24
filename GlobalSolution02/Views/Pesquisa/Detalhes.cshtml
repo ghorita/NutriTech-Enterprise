@@ -1,0 +1,51 @@
+﻿@model GlobalSolution02.Models.Calculadora
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        color: white;
+    }
+
+    td {
+        margin: 20px;
+    }
+</style>
+
+<h2>Detalhes</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Sexo</th>
+        <th>Data</th>
+        <th>Peso</th>
+        <th>Altura</th>
+        <th>IMC</th>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Nome</td>
+        <td>@Model.Idade</td>
+        <td>@Model.Sexo</td>
+        <td>@Model.Data.ToShortDateString()</td>
+        <td>@Model.Peso</td>
+        <td>@Model.Altura</td>
+        <td>@Model.Imc</td>
+    </tr>
+</table>

@@ -1,0 +1,36 @@
+﻿@model CalculadoraIMC
+
+
+@{
+    ViewData["Title"] = "Resultado";
+}
+
+<style>
+    /* Seu estilo aqui */
+</style>
+
+<h2>Resultado</h2>
+
+<p>Seu IMC é: @Model.Resultado</p>
+
+<p>Copie o resultado do IMC para guardar seus dados.</p>
+
+@{
+    string mensagemMotivacional = string.Empty;
+
+    if (Model.Resultado < 18)
+    {
+        mensagemMotivacional = "Você está abaixo do peso. Lembre-se de manter uma alimentação saudável e equilibrada.";
+    }
+    else if (Model.Resultado >= 18 && Model.Resultado <= 25)
+    {
+        mensagemMotivacional = "Parabéns! Seu peso está dentro da faixa considerada normal. Continue mantendo hábitos saudáveis.";
+    }
+    else
+    {
+        mensagemMotivacional = "Seu peso está acima do normal. Considere adotar hábitos mais saudáveis, como praticar exercícios e ter uma dieta equilibrada.";
+    }
+}
+
+<p>Feedback: @mensagemMotivacional</p>
+
